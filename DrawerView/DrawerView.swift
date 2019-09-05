@@ -93,7 +93,6 @@ private struct ChildScrollViewInfo {
     var gestureRecognizers: [UIGestureRecognizer] = []
 }
 
-
 @IBDesignable public class DrawerView: UIView {
 
     // MARK: - Public types
@@ -430,8 +429,8 @@ private struct ChildScrollViewInfo {
             view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             view.heightAnchor.constraint(equalTo: self.heightAnchor),
             view.topAnchor.constraint(equalTo: self.topAnchor)
-        ] {
-            c.isActive = true
+            ] {
+                c.isActive = true
         }
     }
 

@@ -148,7 +148,9 @@ private struct ChildScrollViewInfo {
 
     fileprivate var childScrollViews: [ChildScrollViewInfo] = []
 
-    private var overlay: Overlay?
+    var overlay: Overlay?
+
+    var overlayBackgroundColor: UIColor = UIColor.black
 
     private let borderView = UIView()
 
@@ -974,7 +976,7 @@ private struct ChildScrollViewInfo {
     }
 
     private func updateOverlayVisuals(_ overlay: Overlay?) {
-        overlay?.backgroundColor = UIColor.black
+        overlay?.backgroundColor = self.overlayBackgroundColor
         overlay?.cutCornerSize = self.cornerRadius
     }
 

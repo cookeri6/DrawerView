@@ -148,9 +148,7 @@ private struct ChildScrollViewInfo {
 
     fileprivate var childScrollViews: [ChildScrollViewInfo] = []
 
-    public var overlay: Overlay?
-
-    public var overlayBackgroundColor: UIColor = UIColor.black
+    private var overlay: Overlay?
 
     private let borderView = UIView()
 
@@ -194,6 +192,12 @@ private struct ChildScrollViewInfo {
     /// The used effect for the drawer view background. When set to nil no
     /// effect is used.
     public var backgroundEffect: UIVisualEffect? = kDefaultBackgroundEffect {
+        didSet {
+            updateVisuals()
+        }
+    }
+
+    public var overlayBackgroundColor: UIColor = UIColor.black {
         didSet {
             updateVisuals()
         }

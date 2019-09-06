@@ -148,9 +148,9 @@ private struct ChildScrollViewInfo {
 
     fileprivate var childScrollViews: [ChildScrollViewInfo] = []
 
-    var overlay: Overlay?
+    public var overlay: Overlay?
 
-    var overlayBackgroundColor: UIColor = UIColor.black
+    public var overlayBackgroundColor: UIColor = UIColor.black
 
     private let borderView = UIView()
 
